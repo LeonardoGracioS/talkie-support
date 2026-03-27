@@ -3,13 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>Talkie — Support</title>
 <style>
-  body { font-family: -apple-system, system-ui, sans-serif; max-width: 700px; margin: 0 auto; padding: 24px; color: #1a1d2e; line-height: 1.6; }
-  h1 { font-size: 24px; margin-bottom: 4px; }
-  h2 { font-size: 18px; margin-top: 28px; color: #5B6AF0; }
-  .date { color: #6b7194; font-size: 14px; margin-bottom: 24px; }
-  a { color: #5B6AF0; }
+:root {
+  color-scheme: light dark;
+  --bg: #f5f6fa;
+  --text: #1a1d2e;
+  --text-secondary: #6b7194;
+  --heading: #4f5fd4;
+  --link: #4a5ad4;
+  --link-hover: #3d4bb8;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1c1e;
+    --text: #f2f2f7;
+    --text-secondary: #aeaeb8;
+    --heading: #a8b4ff;
+    --link: #b4c0ff;
+    --link-hover: #d0d8ff;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+h1 { font-size: 24px; font-weight: 700; margin: 0 0 4px; color: var(--text); letter-spacing: -0.02em; }
+h2 { font-size: 18px; font-weight: 600; margin: 28px 0 10px; color: var(--heading); }
+h3 { font-size: 16px; font-weight: 600; margin: 22px 0 8px; color: var(--text); }
+.date { color: var(--text-secondary); font-size: 14px; margin-bottom: 24px; }
+p { margin: 0 0 12px; }
+a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { color: var(--link-hover); }
 </style>
 </head>
 <body>
@@ -23,7 +56,7 @@
 <h2>Questions fréquentes</h2>
 
 <h3>Comment configurer la voix clonée ?</h3>
-<p>Créez un compte sur <a href="https://elevenlabs.io" target="_blank">ElevenLabs</a>, récupérez votre clé API, puis entrez-la dans les réglages de l'application. Vous pouvez ensuite enregistrer des échantillons vocaux et cloner la voix.</p>
+<p>Créez un compte sur <a href="https://elevenlabs.io" target="_blank" rel="noopener">ElevenLabs</a>, récupérez votre clé API, puis entrez-la dans les réglages de l'application. Vous pouvez ensuite enregistrer des échantillons vocaux et cloner la voix.</p>
 
 <h3>Les suggestions IA ne fonctionnent pas</h3>
 <p>Les suggestions IA nécessitent iOS 26 ou ultérieur avec Apple Intelligence activé. Sur les versions antérieures, utilisez le mode saisie manuelle (bouton clavier).</p>
